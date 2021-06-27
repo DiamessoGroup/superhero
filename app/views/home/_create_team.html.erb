@@ -1,0 +1,11 @@
+<br>
+<div class="row">
+	<div class="col">
+		<%= form_with url: home_team_path, method: :post do |form| %>
+			<%= form.select :query_team_number, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], { include_blank: "Select Your Number Of Colleagues" }, { class: "form-select" } %>
+			<br>
+			<%= form.submit "Build Your Team", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>
+<br>

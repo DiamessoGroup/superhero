@@ -1,2 +1,34 @@
-<h1>Hello World</h1>
-<p>This is my first page</p>
+<% hero_content %>
+<br>
+<br>
+<div class="card">
+	<div class="card-header">
+		<%= link_to 'Click Here To Generate A New Superhero', home_index_path, class: "nav-link" %>
+	</div>
+	<div class="card-body">
+		<br>
+		<div class="row">
+			<div class="col-4">
+				<img src="<%= @avatar %>" alt="Avatar">
+			</div>
+			<div class="col-8">
+				<h3>Your Superhero Name:</h3>
+				<p class="card-text">
+					<span class="red"><%= @hero_name %></span>
+				</p>
+				<h3>Your Superhero Power:</h3>
+				<p class="card-text"><span class="red"><%= @hero_power %></span></p>
+
+				<h5>Your Undercover Day Job: </h5>
+				<p class="card-text"><span class="corp_red"><%= @corp_title %></span></p>
+
+				<h5>Your Corporate Superpower: </h5>
+				<p class="card-text"><span class="corp_red"><%= @corp_power %></span></p>
+			</div>
+		</div>
+		<br>
+	</div>
+	<div class="card-footer text-muted">
+		<%= link_to 'Create A Whole SuperHero Team', home_team_path, class: "nav-link" %>
+	</div>
+</div>
