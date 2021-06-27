@@ -1,4 +1,6 @@
 module HomeHelper
+
+  private
   def hero_content
     @hero_name = Faker::Superhero.name
     @hero_power = Faker::Superhero.power
